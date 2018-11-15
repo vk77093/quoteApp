@@ -38,7 +38,7 @@ a{
 
     @endif
 @if(Session::has('quoteData'))
-<p class="alert alert-danger">
+<p class="alert alert-success">
     {{session('quoteData')}}
 </p>
 @endif
@@ -101,7 +101,7 @@ a{
                             <div class="from-group text-center">
                             <label for="name">Your Name</label>
                             <input type="name" class="form-control w-25 p-3 mx-auto" id="name"
-                             placeholder="Enter Name" name="name" style="width: 200px;">
+                             placeholder="Enter Name" name="name" required style="width: 200px;">
                              </div>
 
                              <div class="form-group text-center">
