@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Author;
 use App\Quote;
 use Illuminate\Support\Facades\Session;
+use App\Events\QuoteCreated;
+use Illuminate\Support\Facades\Event;
 
 
 class QuoteController extends Controller
@@ -43,7 +45,10 @@ class QuoteController extends Controller
            'name'=>'required|max:60',
            'quote'=>'required|max:600',
         ]);
+        //Event::fire(new QuoteCreated($author_name));
+
         Quote::create($request->all());
+        //Event::fire(new QuoteCreated($author_name->name));
     //      $input=$request->all();
     //      //$author->author();
     //    // $author=Author::create($request);

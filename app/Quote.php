@@ -13,4 +13,7 @@ class Quote extends Model
     public function author(){
         return $this->belongsTo('App\Author');
     }
+    public function quote(){
+        return $this->belongsTo('App\Quote');
+    }
 }
